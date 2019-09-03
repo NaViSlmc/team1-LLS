@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myClass</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 导航栏样式 */
+        .nav {
+            position: fixed;
+            top: 0;
+            z-index: 400;
+            width: 100%;
+            background: #fff;
+        }
+
+        /* 左边导航部分 */
+        .nav-left {
+            float: left;
+            margin-left: 420px;
+            height: 100%;
+            width: 700px;
+        }
+
+        /* 导航的ul */
+        .nav-left ul {
+            height: 100%;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 1em;
+            list-style: none outside none;
+        }
+
+        /* 所有ul */
+        ul {
+            list-style: none outside none;
+        }
+
+        /* 导航li */
+        .nav-left ul li {
+            float: left;
+            margin: 0 18px;
+            height: 40px;
+            width: 60px;
+            text-align: center;
+            line-height: 40px;
+            color: #505050;
+            cursor: pointer;
+        }
+
+        /* 导航li下的a标签 */
+        #c {
+            color: #00a2f7;
+            display: inline-block;
+            width: 100%;
+            line-height: 40px;
+
+        }
+
+        /* 所有a标签 */
+        a {
+            display: inline-block;
+            width: 100%;
+            line-height: 40px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        /* 侧边栏 */
+        .cebianlan {
+            width: 210px;
+            height: 1064px;
+            background-color: #293039;
+            position: fixed;
+            left: 120px;
+            top: 0;
+            z-index: 499;
+            color: #a3a3a4;
+            font-size: 14px;
+            overflow-y: auto;
+        }
+
+        /* 侧边栏logo */
+        #logo {
+            color: #fff;
+            padding: 3px 0 0 9px;
+            text-indent: 17px;
+            display: block;
+        }
+
+        /* 侧边栏课程名字 */
+        .kecheng {
+            cursor: pointer;
+            color: #a3a3a3;
+            width: 100%;
+            font-size: 16px;
+            line-height: 57px;
+            text-align: center;
+        }
+
+        /* 学期 */
+        .year ul {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding-left: 12px;
+            line-height: 33px;
+            display: inline-block;
+            font-size: 14px;
+            color: #f4f4f4;
+            background-size: 16px 14px;
+        }
+
+        /* 侧边栏课程 */
+        #sel {
+            font-size: 14px;
+            color: #F4F4F4;
+        }
+
+        /* 侧边栏其他课程 */
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 头部导航 -->
+        <div class="nav">
+            <!-- 左边导航部分 -->
+            <div class="nav-left">
+                <ul>
+                    <li><a href="">我的专业</a></li>
+                    <li><a href="" id="c">我的课程</a></li>
+                    <li><a href="">我的成长</a></li>
+                    <li><a href="">我的参与</a></li>
+                    <li><a href="">我的考试</a></li>
+                </ul>
+            </div>
+            <!-- 右边信息部分 -->
+            <div class="right">
+
+                <ul>
+                    <!-- 通知的铃铛 -->
+                    <li>
+
+                    </li>
+                    <!-- 我的名字 -->
+                    <li>
+                        <a href="" id="smc">史蒙超</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <!-- 中间大标题 -->
+        <div style="position: relative;">
+            
+        </div>
+
+        <!-- 中间标题部分 -->
+        <div></div>
+
+        <!-- 侧边栏 -->
+        <div class="cebianlan">
+            <span>
+                <img src="images/logo.png" alt="" id="logo">
+            </span>
+            <div class="kecheng">WEB前端开发</div>
+            <!-- 学期课程选项 -->
+            <div>
+                <!-- 第x学期 -->
+                <div class="year">
+                    <ul>
+                        <li>第一学期👇</li>
+                    </ul>
+                </div>
+                <!-- 详细课程 -->
+                <div class="cclass">
+                    <ul>
+                        <li id="sel">
+                            Web前端基础（HTML...)➕
+                        </li>
+                        <li></li>
+                        <li>编程语言基础(PHP)➕</li>
+                        <li>操作系统应用➕</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
