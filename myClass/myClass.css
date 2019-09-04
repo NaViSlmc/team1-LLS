@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: skyblue;
+}
+
+
+/*顶部导航栏*/
+.nav{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    margin: 0 auto;
+    font-size: 14px;
+    position:fixed;/*固定在顶部*/
+    top:0;
+    left:0;
+}
+.nav div{
+    height: 100%;
+    margin-left: 37px;
+    margin-right: 37px;
+}
+/* 导航栏左边部分 */
+.nav div .nav-left{
+    float: left;
+    margin-left: 300px;
+    width: 700px;
+    height: 40px;
+}
+.nav div .nav-left li{
+    float: left;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 18px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+.nav div .nav-left li a{
+    text-decoration: none;
+    color: #505050;
+}
+.nav div .nav-left li a:hover{
+    color: #1890ff;
+}
+
+/* 导航栏右边部分 */
+.nav div .nav-right{
+    float: right;
+    height: 40px;
+    color: #505050;
+}
+.nav div .nav-right li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+.nav div .nav-right li:nth-child(1){
+    width: 20px;
+    margin-right: 5px;
+}
+.nav div .nav-right li:nth-child(1) img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+.nav div .nav-right li:nth-child(2){
+    width: 70px;
+}
+.nav div .nav-right li:nth-child(2) a{
+    text-decoration: none;
+    color: rgb(163, 163, 164);
+}
+/*鼠标移到用户名时背景变色未写*/
+.nav div .nav-right li:nth-child(3){
+    width: 104px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: #49c0e0;
+}
+.nav div .nav-right li:nth-child(3) .spana{
+    float: left;
+    height: 40px;
+    margin-right: 5px;
+}
+.nav div .nav-right li:nth-child(3) .spana img{
+    width: 16px;
+    height: 16px;
+    margin-top: 12px;
+ 
+}
+.nav div .nav-right li:nth-child(3) .spanb{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+}
+.nav div .nav-right li:nth-child(4){
+    width: 60px;
+}
+.nav div .nav-right li:nth-child(4) img{
+    width: 18px;
+    height: 18px;
+    margin-top: 11px;
+}
+
+
+/* 侧边导航栏 */
+.nav-c{
+    position: fixed;
+    top: 0;
+    left: 37px;
+    width: 210px;
+    height: 700px;
+    background: #293039;
+}
+.nav-c .logo{
+    height: 38px;
+    padding: 4px 4px 2px 6px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.nav-c .title{
+    height: 40px;
+    font: 16px "微软雅黑";
+    color: #a3a3a3;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-c .title p{
+    position: absolute;
+    margin-top: 15px;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+}
+.nav-c .term{
+    height: 35px;
+    line-height: 31px;
+    margin-top: 10px;
+    background: #141a21;
+    font: 14px "微软雅黑";
+    color: #f4f4f4;
+    text-align: center;
+    padding: 0px 0px 0px 8px;
+    border: 2px solid rgb(101,109,118);
+    border-radius: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+/* 标题部分 */
+.header{
+    width: 100%;
+    height: 170px;
+    margin-top: 40px;
+}
+.header .h-top{
+    height: 144px;;
+    line-height: 144px;;
+    background: rgba(197,146,242);
+    color: #fff;
+}
+.header .h-top div{
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.header .h-top div p{
+    position: absolute;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 56px;
+    left: 40%;
+    font-size: 30px;
+}
+.header .h-top div p span:nth-child(1){
+    float: left;
+    height: 28px;
+    width: 28px;
+    color: #fff;
+    margin-right: 10px;
+}
+.header .h-top div p span:nth-child(1) img{
+    width: 30px;
+}
+.header .h-top div p span:nth-child(2){
+    float: left;
+    height: 28px;
+
+}
+.header .h-bottom{
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    background: #e4e9ec;
+    color: #303030;
+    font-size: 14px;
+}
+.header .h-bottom p{
+    margin-left: 267px;
+}
+
+/*主体内容*/
+.main{
+    width:100%;
+    height: 500px;
+}
+
+/*底部*/
+.footer {
+    width: 100%;
+    height: 126px;
+    background: url(../images/ditu.jpg);
+    padding-top: 30px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.footer .bbox {
+    width: 600px;
+    margin: 0 auto;
+
+}
+.footer .bbox .b1 {
+    width: 600px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #afb0b2;
+    margin:0px 0px 8px 0px;
+    font: 16px "微软雅黑";
+
+}
+.footer .bbox .b1 img {
+    width: 200px;
+    height: 30px;
+    vertical-align: middle;
+}
+.footer .bbox .b1 .line {
+    color: #6c7177;
+    font-weight: 100;
+    margin-left: 10px;
+}
+.footer .bbox .b2 {
+    width: 100%;
+    height: 25px;
+}
+.footer .bbox .b2 .bb1,.bb2,.bb3 {
+    font: 14px "微软雅黑";
+    color: #afb0b2;
+    text-decoration: none;
+}
+.footer .bbox .b2 .bb1 {
+    margin-left: 158px; 
+}
+.footer .bbox .b2 .bb2,.bb3 {
+    margin-left: 60px; 
+}
+.footer .bbox .b3 {
+    width: 600px;
+    height: 30px;
+    color: #6f7376;
+    font: 12px "微软雅黑";
+    text-align: center;
+    line-height: 30px;
+}
