@@ -27,7 +27,7 @@ body{
 /* 导航栏左边部分 */
 .nav div .nav-left{
     float: left;
-    margin-left: 300px;
+    margin-left: 385px;
     width: 700px;
     height: 40px;
 }
@@ -117,9 +117,9 @@ body{
 .nav-c{
     position: fixed;
     top: 0;
-    left: 37px;
+    left: 120px;
     width: 210px;
-    height: 700px;
+    height: 1064px;
     background: #293039;
 }
 .nav-c .logo{
@@ -151,7 +151,7 @@ body{
     background: #141a21;
     font: 14px "微软雅黑";
     color: #f4f4f4;
-    text-align: center;
+    text-align: left;
     padding: 0px 0px 0px 8px;
     border: 2px solid rgb(101,109,118);
     border-radius: 2px;
@@ -209,7 +209,7 @@ body{
     font-size: 14px;
 }
 .header .h-bottom p{
-    margin-left: 267px;
+    margin-left: 350px;
 }
 
 /*主体内容*/
