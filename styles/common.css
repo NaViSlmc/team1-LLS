@@ -1,0 +1,608 @@
+
+@charset "UTF-8";
+.index-page .videos ul,
+.nemo-page .scene-item1 .videos ul,
+#doc .download-app ul,
+#doc .row {
+    *zoom: 1;
+}
+html p{
+  margin-bottom: 0px;
+}
+.index-page .videos ul:before,
+.nemo-page .scene-item1 .videos ul:before,
+#doc .download-app ul:before,
+#doc .row:before,
+.index-page .videos ul:after,
+.nemo-page .scene-item1 .videos ul:after,
+#doc .download-app ul:after,
+#doc .row:after {
+    display: table;
+    content: "";
+}
+
+.index-page .videos ul:after,
+.nemo-page .scene-item1 .videos ul:after,
+#doc .download-app ul:after,
+#doc .row:after {
+    clear: both;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%;
+    color: #000;
+    background-color: #FFF;
+}
+
+
+/*
+ * 去掉height:100%;定义
+ * -webkit-text-size-adjust:none会导致页面缩放文字失效
+ * background-color:#FFF,html元素设置了背景色会导致body的背景色不能100%高度覆盖
+ * 把白色背景色定义在html上，定义这个背景色的目的是，修复一些浏览器中设置了浏览器保护色
+ * overflow-y:scroll定义在被iframe引用的页面就强制带滚动条
+ * */
+
+body {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+
+/* word-break:break-all会截断英文单词 min-height:100%是个好东西 */
+
+:active,
+ :focus,
+ :visited {
+    outline: 0;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+:link,
+ :visited,
+ins {
+    text-decoration: none;
+}
+
+
+/*
+ * :focus{outline:0}定义后按tab键在连接间跳转没有标识当前连接的外轮廓点线
+ * :active{outline:0;}
+ * :visited{outline:0;}
+ * */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+audio,
+video,
+canvas {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+select,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+iframe {
+    border: 0 none;
+}
+
+img {
+    border: 0 none;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+th,
+var,
+optgroup {
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+kbd,
+samp,
+tt,
+sup,
+sub,
+small,
+input,
+button,
+textarea,
+select {
+    font-size: 100%;
+}
+
+abbr,
+acronym {
+    border: 0 none;
+    font-variant: normal;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+ol,
+ul,
+menu {
+    list-style: none outside none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+mark {
+    background-color: #FF6;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+input,
+select,
+button {
+    vertical-align: middle;
+}
+
+button {
+    width: auto;
+    cursor: pointer;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;!important;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    -webkit-appearance:checkbox!important;
+}
+
+input[type=radio] {
+    -webkit-appearance:radio!important;
+}
+
+button::-moz-focus-inner,
+input[type=file]>input[type=button]::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+
+body {
+    color: #000!important;
+    /*font: 14px/1.5 "Microsoft YaHei", "微软雅黑", tahoma, sans-serif;*/
+    font-size: 14px!important;
+    line-height: 1.5;
+    font-family: "Microsoft YaHei", "微软雅黑", "Hiragino Sans GB", tahoma, Arial, sans-serif!important;
+    -webkit-font-smoothing: antialiased;
+    /*line-height: inherit!important;*/
+}
+
+.hidden {
+    display: none;
+}
+
+*:before,
+*:after {
+    box-sizing: content-box;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a:focus {
+    text-decoration: none;
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip: ink;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfloat {
+    zoom: 1
+}
+
+.commonButton {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background: #49c0e0;
+    color: #fff;
+}
+
+select {
+    border-radius: 0;
+}
+
+.commonButton.button {
+    padding: 2px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.commonButton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #38a7c5;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.commonButton:hover:before,
+.commonButton:focus:before,
+.commonButton:active:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+.commonButton:hover,
+.commonButton:focus,
+.commonButton:active {
+    color: white;
+}
+
+/*
+    清除浮动
+*/
+.clearfix:after{
+    content:"";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear: both;
+}
+
+.clearfix{
+    zoom:1;
+}
+
+
+/*
+    公共：加载动画、富文本样式
+*/
+
+.y-specification .wrapper {
+    width: 100%;
+    height: 195px;
+}
+
+.simditor .simditor-body {
+    overflow-y: auto;
+    height: 150px;
+    min-height: 100px;
+    padding: 22px 5px 10px;
+}
+
+.simditor-body {
+    overflow-y: auto;
+}
+
+.html-container {
+    position: relative;
+    height: 100%;
+}
+
+::selection {
+    background: #bbe0ff;
+    color: #000;
+}
+
+::-moz-selection {
+    background: #bbe0ff;
+    color: #000;
+}
+
+::-webkit-selection {
+    background: #bbe0ff;
+    color: #000;
+}
+
+.pace.pace-inactive {
+    display: none;
+}
+
+.pace {
+    -webkit-pointer-events: none;
+    /*pointer-events: none;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    /*height: 60px;*/
+    /*width: 70px;*/
+    /*margin: auto;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    width: 100%;
+    height: 100%;
+    background: rgba(104,104,104,.6);
+}
+
+.pace .pace-progress {
+    z-index: 2000;
+    position: absolute;
+    height: 60px;
+    width: 70px !important;
+    margin-left: 4px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.pace .pace-progress:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+    background: #fff;
+    /*background: #49c0e0;*/
+}
+
+.pace .pace-progress:after {
+    content: 'loading';
+    margin-left: 8px;
+    color: #fff;
+}
+
+.pace .pace-activity {
+    font-size: 15px;
+    line-height: 1;
+    z-index: 2000;
+    position: absolute;
+    height: 60px;
+    width: 70px;
+    display: block;
+    margin-left: 14px;
+    left: 51%;
+    top: 50%;
+    transform: translate(-51%, -50%);
+    -o-transform: translate(-51%, -50%);
+    -ms-transform: translate(-51%, -50%);
+    -moz-transform: translate(-51%, -50%);
+    -webkit-transform: translate(-51%, -50%);
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.pace .pace-activity:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    /*background-color: #49c0e0;*/
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.pace .pace-activity:after{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    /*background-color: #49c0e0;*/
+    border-radius: 100%;
+    margin-left: 5px;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}
