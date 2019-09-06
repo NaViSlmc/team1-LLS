@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>培养能力,塑造人才</title>
+    <link rel="stylesheet" href="t-major.css">
+    <style>
+        /*  tab页样式 */
+        .selected{
+            border-bottom: 3px solid #49c0e0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="course">
+        <!-- 顶部导航栏 -->
+        <nav class="nav">
+            <div>
+                <div class="logoImg"><img src="../images/logo.png" alt=""></div>
+                <ul class="nav-left">
+                    <li><a href="#" style="color: #49c0e0">我教的专业</a></li>
+                    <li><a href="">我教的课程</a></li>
+                    <li><a href="">考试管理</a></li>
+                    <li><a href="">学院管理</a></li>
+                    <li><a href="">我的贡献</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li><img src="../images/news.png" alt=""></li>
+                    <li><a href="">程锐</a></li>
+                    <li>
+                        <span class="spana"><img src="../images/problem.png" alt=""></span>
+                        <span class="spanb">在线提问</span>
+                    </li>
+                    <li><img src="../images/quit.png" title="退出登录" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 课程标题标题部分 -->
+        <header class="header">
+            <div class="h-top">
+                <div class="h-t-divs">
+                    <div class="h-top-div1">第一阶段 HTML基础(一)</div>
+                    <div class="h-top-div2">
+                        <span>第一阶段 HTML基础(一)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="h-bottom">
+                <span>Web前端基础（HTML5+CSS3) —— 第一阶段 HTML基础(一)</span>
+                <span>返回<img src="../images/arrow-b.png" alt=""></span>
+            </div>
+        </header>
+
+        <!-- 中间内容-课程详情 -->
+        <main class="main">
+            <div class="m-header">
+                <!-- 侧边导航栏 -->
+                <div class="nav-c">
+                    <div>教学指导</div>
+                </div>
+                <div class="nav-us">
+                    <ul class="nav-u">
+                        <li onClick="dj(0)" class="selected">我要上课</li>
+                        <li onClick="dj(1)">查看教案</li>
+                        <li onClick="dj(2)">我要备读</li>
+                        <li onClick="dj(3)">添加习题</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tabdiv">
+                <div class="m-video" style="display:block;">
+                    <div class="m-v-left">
+                        <video src="../video/20170616_202624.mp4" width="750px" controls></video>
+                    </div>
+                    <div class="m-v-right">
+                        <div class="v-text">
+                            <img src="../images/video2.png" alt="">
+                            <span>视频播放列表</span>
+                        </div>
+                        <div class="vTitlexz">01.王准男-独家记忆</div>
+                        <div class="vTitlen">02.王准男-独家记忆</div>
+                        <div class="vTitlen">03.王准男-独家记忆</div>
+                    </div>
+                </div>
+                <div class="m-video" style="display: none;">1111111</div> 
+                <div class="m-video" style="display: none;">2222222</div> 
+                <div class="m-video" style="display: none;">
+                    <div class="divClass1">
+                        <span class="m-b-h-s1">课程章节</span>
+                    </div>
+                    <div class="divClass2">1.客户端和服务器的工作原理？</div>
+                    <div class="divClass2">2.客户端和服务器的工作原理？</div>
+                    <div class="divClass2">3.客户端和服务器的工作原理？</div>
+                </div> 
+            </div>         
+        </main>
+
+        <footer class="footer">
+            <div class="f-box">
+                <span>做笔记</span>
+                <img src="../images/sjt.png" alt="">
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        var tabs = document.getElementsByClassName('nav-u')[0].getElementsByTagName('li');
+        var contents = document.getElementsByClassName('tabdiv')[0].getElementsByClassName('m-video');
+
+        function dj(index) {
+            for(var i=0;i<tabs.length;i++){
+                if(i == index) {
+                    tabs[i].className = 'selected';
+                    contents[i].style.display = 'block';
+                }else{
+                    tabs[i].className = '';
+                    contents[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
