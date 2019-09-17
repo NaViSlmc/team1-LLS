@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>article</title>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="./elementUI/index.css">
+    <link rel="stylesheet" href="./css/article1.css">
+</head>
+
+<body>
+    <div id="app">
+        <el-row class="title">
+            <el-col :span="2" :offset="11">
+                我的个人博客
+            </el-col>
+        </el-row>
+        <el-row class="nav">
+            <el-col :span="1" offset="2">
+                <el-button type="text">首页</el-button>
+            </el-col>
+            <el-col :span="1" offset="1">
+                <el-button type="text">文章列表</el-button>
+            </el-col>
+            <el-col :span="1" offset="1">
+                <el-button type="text">登录</el-button>
+            </el-col>
+            <el-col :span="1" offset="1">
+                <el-button type="text">注册</el-button>
+            </el-col>
+            <el-col :span="4" offset="6">
+                <el-input placeholder="请输入文章" prefix-icon="el-icon-search" v-model="input">
+                </el-input>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="12" offset="2" class="main_left">
+                <el-row style="font-size: 30px;margin: 20px 0;text-align: center;">
+                    <el-col>Lorem ipsum dolor sit amet.</el-col>
+                </el-row>
+                <el-row style="font-size: 13px;color: #ccc;text-align: center;">
+                    <el-col>2015/10/9</el-col>
+                </el-row>
+                <el-row style="margin: 30px 0;">
+                    <el-col><img src="./i/b1.jpg" alt=""></el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fugit laudantium at ipsa tempore ullam, expedita ab rem possimus doloremque fugiat libero culpa eaque voluptatum sapiente quas maxime iste vero?
+                    </el-col>
+                </el-row>
+                <el-row style="height: 100px;">
+                    <el-col></el-col>
+                </el-row>
+                <el-divider></el-divider>
+                <el-row>
+                    评论
+                </el-row>
+                <el-row style="margin: 20px 0;">
+                    <el-col :span="8">
+                        <el-input placeholder="名字" v-model="input" clearable>
+                        </el-input>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col>
+                        <el-input type="textarea" :rows="5" placeholder="一字千金" v-model="textarea">
+                        </el-input>
+                    </el-col>
+                </el-row>
+                <el-row style="margin-top: 20px;">
+                    <el-button type="info" plain>发表评论</el-button>
+                </el-row>
+                <el-row style="height: 100px;">
+                    <el-col></el-col>
+                </el-row>
+                <el-divider></el-divider>
+            </el-col>
+            <el-col :span="7" offset="1" class="main_right">
+                <el-row>
+                    <el-col>
+                        <el-divider>
+                            <el-popover placement="bottom" width="800" trigger="click">
+                                <span>您好，我是n准粑粑！！！ahahahah( ´･ω･)ﾉ(._.`)摸摸头</span>
+                                <el-button slot="reference" type="text" size="medium">
+                                    <span style="color: #ccc;">Aboout me</span>
+                                </el-button>
+                            </el-popover>
+                        </el-divider>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="22" offset="1">
+                        <img src=".//images/20.jpg" alt="">
+                    </el-col>
+                </el-row>
+
+                <el-row>
+                    <el-col>
+                        <el-divider>
+                            <el-popover placement="bottom" width="800" trigger="click">
+                                <span>您好，我还是n准粑粑！！！ahahahahㄟ( ▔, ▔ )ㄏ</span>
+                                <el-button slot="reference" type="text" size="medium">
+                                    <span style="color: #ccc;">推荐</span>
+                                </el-button>
+                            </el-popover>
+                        </el-divider>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="22" offset="1">
+                        <img src="./images/03.jpg" alt="">
+                    </el-col>
+                </el-row>
+
+                <el-row>
+                    <el-col>
+                        <el-divider>
+                            <el-popover placement="bottom" width="800" trigger="click">
+                                <span>您好，我依然是n准粑粑！！！ahahahah（づ￣3￣）づ╭❤～</span>
+                                <el-button slot="reference" type="text" size="medium">
+                                    <span style="color: #ccc;">爱好</span>
+                                </el-button>
+                            </el-popover>
+                        </el-divider>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="22" offset="1">
+                        <img src=".//images/04.jpg" alt="">
+                    </el-col>
+                </el-row>
+                
+                <el-row>
+                    <el-col>
+                        <el-divider>
+                            <el-popover placement="bottom" width="800" trigger="click">
+                                <span>您好，n准粑粑永远都是n粑粑！！！ahahahah[]~(￣▽￣)~*</span>
+                                <el-button slot="reference" type="text" size="medium">
+                                    <span style="color: #ccc;">联系方式</span>
+                                </el-button>
+                            </el-popover>
+                        </el-divider>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="22" offset="1">
+                        <img src="./i/f6.jpg" alt="">
+                    </el-col>
+                </el-row>
+                
+
+
+            </el-col>
+        </el-row>
+
+        <el-main style="height:200px"></el-main>
+        
+        <el-footer class="footer">
+            © 2015 AllMobilize, Inc. Licensed under MIT license. Made with love By LWXYFER
+        </el-footer>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="./elementUI/vue.js"></script>
+<!-- import JavaScript -->
+<script src="./elementUI/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                input: "",
+                textarea: "",
+                
+            };
+        }
+    })
+</script>
+</html>

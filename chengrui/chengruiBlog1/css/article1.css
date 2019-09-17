@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#app{
+    background: #EBEEF5;
+}
+.title{
+    padding-top: 20px;
+    color: #409EFF;
+    font-size: 18px;
+}
+.nav{
+    margin-top: 25px;
+    background: #000;
+    height: 60px;
+    line-height: 60px;
+}
+/* .main_left{
+    border: 1px solid #000;
+} */
+.main_left img{
+    width: 100%;
+    border-radius: 5px;
+}
+/* .main_right{
+    border: 1px solid #000;
+} */
+.main_right img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+
+.footer{
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 350%;
+}
