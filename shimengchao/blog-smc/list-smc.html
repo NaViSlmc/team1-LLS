@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <!-- <link rel="stylesheet" href="el/el.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 头部样式 */
+        .el-container .el-header {
+            background: rgba(68, 68, 68);
+            min-height: 20px;
+            height: 360px;
+        }
+
+        .el-row {
+            height: 30px;
+        }
+
+        .el-col {
+            margin-top: 10px;
+        }
+
+        /* 广告 */
+        .ad {
+            font-size: 12px;
+            color: #a8a8aa;
+        }
+
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-header style="height: 40px" type="primary">
+                <el-row>
+                    <el-col :span="2" :offset="19" class="ad">
+                        <广告位待租>
+                    </el-col>
+                </el-row>
+            </el-header>
+            <el-header style="background: rgba(45,45,45,0.98);height: 40px">
+                <el-row>
+                    <el-col :span="1" :offset="6">
+                        <el-link class="el-icon-s-help" :underline="false" style="color: #FFFFFF"></el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link href="index-smc.html" :underline="false" style="color: #FFFFFF">首页</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link href="list-smc.html" :underline="false" style="color: #FFFFFF">文章列表</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link href="login-smc.html" :underline="false" style="color: #FFFFFF">登录</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link href="reg-smc.html" :underline="false" style="color: #FFFFFF">注册</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link :underline="false" style="color: #FFFFFF">关于我们</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link class="el-icon-search" :underline="false" style="color: #FFFFFF"></el-link>
+                    </el-col>
+                </el-row>
+            </el-header>
+
+            <!-- 中央列表 -->
+            <el-main>
+                <!-- 文章列表 -->
+                <div class="block" style="width: 622px;margin: 0 auto;">
+                    <el-timeline>
+                        <el-timeline-item timestamp="2019/9/16" placement="top">
+                            <el-card>
+                                <h1>我本楚狂人 凤歌笑孔丘</h1>
+                                <i>我们一直在坚持着</i>
+                                <img class="article_img" src="images/otr.jpg" alt="" width="10%" style="float: right">
+                                <p>smc 提交于 2019/9/16 20:46</p>
+                            </el-card>
+                        </el-timeline-item>
+                        <el-timeline-item timestamp="2019/9/17" placement="top">
+                            <el-card>
+                                <h1>世间所有的相遇 都是久别重逢</h1>
+                                <i>自顾自往前走。</i>
+                                <img class="article_img" src="images/otr2.jpg" alt="" width="10%" style="float: right">
+                                <p>smc 提交于 2019/9/17 20:00</p>
+                            </el-card>
+                        </el-timeline-item>
+                        <el-timeline-item timestamp="2019/9/18" placement="top">
+                            <el-card>
+                                <h1>陌上花开 可缓缓归矣</h1>
+                                <i>那一天我二十一岁，在我一生的黄金时代。我有好多奢望。
+                                    我想爱，想吃，还想在一瞬间变成天上半明半暗的云。</i>
+                                <img class="article_img" src="images/otr3.jpg" alt="" width="10%" style="float: right">
+                                <p>smc 提交于 2019/9/18 19:22</p>
+                            </el-card>
+                        </el-timeline-item>
+                        <el-timeline-item timestamp="2019/9/20" placement="top">
+                            <el-card>
+                                <h1>爱自己是终生浪漫的开始</h1>
+                                <i>orem ipsum dolor sit amet consectetur adipisicing elit.</i>
+                                <img class="article_img" src="images/otr4.jpg" alt="" width="10%" style="float: right">
+                                <p>smc 提交于 2019/9/20 10:41</p>
+                            </el-card>
+                        </el-timeline-item>
+                    </el-timeline>
+
+                </div>
+                <!-- 分页 -->
+                <div style="width: 622px;text-align: center; margin: 0 auto;">
+                    <el-pagination background layout="prev, pager, next" :total="20">
+                    </el-pagination>
+                </div>
+            </el-main>
+
+            <el-footer style="text-align: center;">
+                <hr>
+                Designed and developed by NaViSlmc.<br>
+                Copyright © 2019 NaViSlmc-blog. All Rights Reserved.
+            </el-footer>
+        </el-container>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="el/el-vue.js"></script>
+<!-- import JavaScript -->
+<script src="el/el.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+
+            }
+        },
+        methods: {
+
+        }
+    })
+</script>
+
+</html>
