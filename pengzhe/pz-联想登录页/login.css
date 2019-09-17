@@ -1,0 +1,143 @@
+body{
+    background-image:url('./images/06denglu.jpg')
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    display: block;
+}
+.a1 .a3{
+    width: 240px;
+    margin: 0 auto;
+}
+.a2{
+    position: absolute;
+    height: 34px;
+    font-size: 14px;
+    line-height: 34px;
+    background-color: rgba(150, 164, 224, .17);
+    color: #eaedf9;
+    padding: 0 11px;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.a4 {
+    width: 400px;
+    height: 200px;
+    margin-left:-50px
+}
+.a4 img {
+    height: 100%;
+    width: 100%;
+}
+.a3 p{
+    margin-left:50px;
+    color:white
+}
+.a5{
+    width: 100%;
+    padding-top: 24px;
+    overflow: hidden;
+}
+.a5 .a6{
+    width: 388px;
+    height: 320px;
+    background-color: #f2f7fa;
+    margin: 0 auto;
+    padding-top: 31px;
+}
+.a6 p{
+    text-align: center;
+    color: #606060;
+    font-weight: 500;
+    font-size: 17px;
+}
+#zhanghao span{
+    font-size: 22px;
+    margin-top: -8px;
+    color: #acafb1;
+}
+#zhanghao input{
+    width: 288px;
+    border: none;
+    height: 27px;
+    line-height: 27px;    
+    text-indent: 5px;
+    margin-top: -7px;
+    margin-left:50px;
+}
+#mima{
+    width: 320px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: 1px solid #e1e6e9;
+    overflow: hidden;
+}
+#mima input{
+    width: 288px;
+    border: none;
+    height: 30px;
+    text-indent: 5px;
+    margin-top: -10px;
+    margin-left:16px;
+}
+#denglu{
+    width: 320px;
+    height: 36px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #49c0e0;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    border: 1px solid #49c0e0;
+    color: #feffff;
+    letter-spacing: 1px;
+}
+.a7{
+    margin-top:20px;
+}
+.foot{
+    height: 72px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.14);
+    position: absolute;
+    bottom: 10px;
+    padding-top: 15px;
+}
+.foot p{
+    text-align: center;
+    line-height: 2.2;
+    color: #9196b3;
+    font-size: 12px;
+    font-family: "iconfont";
+}
+.foot a{
+    margin: 0 43px;
+    color: #bebfd1;
+    font-size: 13px;
+}
+.a8{
+    float: left;
+    margin-left:30px;
+}
+.a8 span{
+    margin-left: 2px;
+    position: relative;
+    top: 1px;
+}
+.a9{
+    float: right;
+}
+.a9 a{
+    color: #1380f9;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
