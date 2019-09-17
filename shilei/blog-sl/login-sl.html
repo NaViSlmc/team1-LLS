@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(images/background-blur-blurred.jpg) no-repeat;
+            background-size: 100% auto;
+        }
+
+        /* 广告 */
+        .ad {
+            font-size: 12px;
+            color: #a8a8aa;
+        }
+
+        /* logo */
+        .main_logo {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* logo下的字体 */
+        .main_logo div {
+            font-size: 21px;
+            margin-bottom: 20px;
+            color: #606266;
+        }
+
+        /* 输入框 */
+        .main_input {
+            width: 300px;
+        }
+
+        /* 保持登录&忘记密码 */
+        .main_keep {
+            text-align: center;
+        }
+
+        /* footer */
+        .footer {
+            text-align: center;
+            line-height: 100%;
+            color: #606266;
+        }
+
+        /* css3 */
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            /*初始状态 透明度为0*/
+            40% {
+                opacity: 0;
+            }
+
+            /*过渡状态 透明度为0*/
+            100% {
+                opacity: 1;
+            }
+
+            /*结束状态 透明度为1*/
+        }
+
+        @-webkit-keyframes fade-in {
+
+            /*针对webkit内核*/
+            0% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #wrapper {
+            animation: fade-in;
+            /*动画名称*/
+            animation-duration: 1.5s;
+            /*动画持续时间*/
+            -webkit-animation: fade-in 1.5s;
+            /*针对webkit内核*/
+        }
+
+        /* 毛玻璃 */
+        .wrap {
+            position: relative;
+            margin: 0 auto;
+            padding: 1em;
+            max-width: 23em;
+            background: hsla(0, 0%, 100%, .25) border-box;
+            overflow: hidden;
+            border-radius: .3em;
+            box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
+            text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+        }
+
+        .wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: -30px;
+            z-index: -1;
+            -webkit-filter: blur(20px);
+            filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <!-- 导航 -->
+            <el-row>
+                <el-col :span="3" :offset="2">
+                    <img src="images/logoa.png" alt="" height="100px">
+                </el-col>
+                <el-col :span="1" :offset="15" style="height: 60px;text-align: center">
+                    <i class="el-icon-search" style="line-height: 60px; color: white;"></i>
+                </el-col>
+                <el-col :span="1" style="height: 60px;text-align: center">
+                    <i @click="drawer = true" class="el-icon-menu" style="line-height: 60px; color: white;"></i>
+                    <el-drawer title="文章预览(如查看更多请登录)" :visible.sync="drawer">
+                        <el-table :data="gridData">
+                            <el-table-column property="article" label="文章" width="230">
+                            </el-table-column>
+                            <el-table-column property="date" label="日期" width="230"></el-table-column>
+                        </el-table>
+                    </el-drawer>
+                </el-col>
+            </el-row>
+            </el-header>
+            <el-main style="margin: 0 auto; margin-top: 80px" id="wrapper" class="wrap">
+                <!-- logo -->
+                <div class="main_logo">
+                    <img src="images/logo.png" alt="" width="300px;">
+                    <div>登录你的账户
+                        <el-link href="reg-smc.html">没有账户?注册一个</el-link>
+                    </div>
+                    
+                </div>
+                <!-- 输入框 -->
+                <div class="main_input">
+                    <el-form>
+                        <el-form-item>
+                            <el-input placeholder="请输入你的ID"></el-input>
+                            <el-input placeholder="请输入你的密码"></el-input>
+                        </el-form-item>
+                    </el-form>
+                </div>
+                <!-- 保持登录&忘记密码 -->
+                <div class="main_keep">
+                    <el-row>
+                        <el-col :span="6">
+                            <el-checkbox>保持我的登录状态</el-checkbox>
+                        </el-col>
+                        <el-col :span="6" :offset="11">
+                            <el-button plain type="primary" size="mini">立即登录</el-button>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
+                    <el-link>忘记了ID或密码?</el-link>
+                </div>
+            </el-main>
+            <el-footer style="margin-top: 100px">
+                <el-divider></el-divider>
+                <div class="footer">
+                    Designed and developed by NaViSlmc.
+                </div>
+            </el-footer>
+        </el-container>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                drawer: false,
+                gridData: [{
+                    article: '我本楚狂人 凤歌笑孔丘',
+                    date: '2016-05-02',
+                }, {
+                    article: '世间所有的相遇 都是久别重逢',
+                    date: '2016-05-04',
+                }, {
+                    article: '陌上花开 可缓缓归矣',
+                    date: '2016-05-01',
+                }, {
+                    article: '爱自己是终生浪漫的开始',
+                    date: '2016-05-03',
+                }]
+            }
+        }
+
+    })
+</script>
+
+</html>

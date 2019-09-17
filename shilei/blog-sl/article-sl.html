@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <!-- <link rel="stylesheet" href="el/el.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 头部样式 */
+        .el-container .el-header {
+            background: rgba(68, 68, 68);
+            min-height: 20px;
+            height: 360px;
+        }
+
+        .el-row {
+            height: 30px;
+        }
+
+        .el-col {
+            margin-top: 10px;
+        }
+
+        /* 广告 */
+        .ad {
+            font-size: 12px;
+            color: #a8a8aa;
+        }
+
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-header style="height: 40px" type="primary">
+                <el-row>
+                    <el-col :span="2" :offset="19" class="ad">
+                        <广告位待租>
+                    </el-col>
+                </el-row>
+            </el-header>
+            <el-header style="background: rgba(45,45,45,0.98);height: 40px">
+                <el-row>
+                    <el-col :span="1" :offset="6">
+                        <el-link class="el-icon-s-help" :underline="false" style="color: #FFFFFF"></el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link :underline="false" style="color: #FFFFFF">首页</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link :underline="false" style="color: #FFFFFF">文章列表</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link href="login-smc.html" :underline="false" style="color: #FFFFFF">登录</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link :underline="false" style="color: #FFFFFF">注册</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link :underline="false" style="color: #FFFFFF">关于我们</el-link>
+                    </el-col>
+                    <el-col :span="1" :offset="1">
+                        <el-link class="el-icon-search" :underline="false" style="color: #FFFFFF"></el-link>
+                    </el-col>
+                </el-row>
+            </el-header>
+
+            <!-- 中间文章列表 -->
+            <div>
+                <el-row style="margin-bottom: 20px;">
+                    <el-col :span="2" :offset="4">
+                        <el-button @click="addTab(editableTabsValue)">
+                            我本楚狂人 凤歌笑孔丘
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                                世间所有的相遇 都是久别重逢
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                                陌上花开 可缓缓归矣
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                                爱自己是终生浪漫的开始
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                            add tab
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                            add tab
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                            add tab
+                        </el-button>
+                    </el-col>
+                    <el-col :span="2">
+                        <el-button @click="addTab(editableTabsValue)">
+                            add tab
+                        </el-button>
+                    </el-col>
+                </el-row>
+
+                <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+                    <el-tab-pane v-for="(item, index) in editableTabs" :key="item.name" :label="item.title"
+                        :name="item.name">
+                        <el-container>
+                            <el-aside style="float: right">
+                                左边
+                            </el-aside>
+                            <el-main>
+                                内容
+                            </el-main>
+                            <el-footer>
+                                评论
+                            </el-footer>
+                        </el-container>
+                    </el-tab-pane>
+                </el-tabs>
+            </div>
+
+            <el-footer style="text-align: center;">
+                <hr>
+                Designed and developed by NaViSlmc.<br>
+                Copyright © 2019 NaViSlmc-blog. All Rights Reserved.
+            </el-footer>
+        </el-container>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="el/el-vue.js"></script>
+<!-- import JavaScript -->
+<script src="el/el.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                editableTabsValue: '2',
+                editableTabs: [{
+                    title: 'Tab 1',
+                    name: '1',
+                    content: 'Tab 1 content'
+                }, {
+                    title: 'Tab 2',
+                    name: '2',
+                    content: 'Tab 2 content'
+                }],
+                tabIndex: 2
+            }
+        },
+        methods: {
+            addTab(targetName) {
+                let newTabName = ++this.tabIndex + '';
+                this.editableTabs.push({
+                    title: 'New Tab',
+                    name: newTabName,
+                    content: 'New Tab content'
+                });
+                this.editableTabsValue = newTabName;
+            },
+            removeTab(targetName) {
+                let tabs = this.editableTabs;
+                let activeName = this.editableTabsValue;
+                if (activeName === targetName) {
+                    tabs.forEach((tab, index) => {
+                        if (tab.name === targetName) {
+                            let nextTab = tabs[index + 1] || tabs[index - 1];
+                            if (nextTab) {
+                                activeName = nextTab.name;
+                            }
+                        }
+                    });
+                }
+
+                this.editableTabsValue = activeName;
+                this.editableTabs = tabs.filter(tab => tab.name !== targetName);
+            }
+        }
+    })
+</script>
+
+</html>
