@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('images/06denglu.jpg');
+}
+html p {
+    margin-bottom: 0px;
+}
+.head{
+    position: absolute;
+    height: 34px;
+    width: 152px;
+    font-size: 14px;
+    line-height: 34px;
+    background-color: rgba(150, 164, 224, .17);
+    color: #eaedf9;
+    padding: 0 11px;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.learning{
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.learning p{
+    margin-top: 0%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+.login{
+    width: 388px;
+    height: 320px;
+    background-color: #f2f7fa;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.zhanghao{
+    text-align: center;
+    color: #606060;
+    font-weight: 500;
+    font-size: 17px;
+}
+#form{
+    margin-top: 50px;
+}
+.user{
+    width: 320px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: 1px solid #e1e6e9;
+    overflow: hidden;
+}
+.user img{
+    margin-bottom: -6px;
+}
+.user input{
+        display: inline-block;
+        width: 288px;
+        border: none;
+        height: 27px;
+        line-height: 27px;
+        background-color: #f2f7fa;
+        background-color: #ff806f;
+        color: #919598;
+        padding-bottom: 3px;
+        font-weight: 100;
+        text-indent: 5px;
+        margin-top: -7px;
+        background-color: #f2f7fa;
+}
+.password input{
+    display: inline-block;
+    width: 288px;
+    border: none;
+    height: 30px;
+    background-color: #f2f7fa;
+    background-color: #ff806f;
+    color: #919598;
+    padding-bottom: 3px;
+    margin-top: -2px;
+    font-weight: 100;
+    text-indent: 5px;
+    margin-top: -10px;
+    background-color: #f2f7fa;
+}
+#button{
+    width: 320px;
+    height: 36px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #49c0e0;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+    border: 1px solid #49c0e0;
+    color: #feffff;
+    letter-spacing: 1px;
+}
+.retrieve{
+    text-indent: 37px;
+    font-size: 12px;
+    color: #909090;
+}
+.retrieve p{
+    display: inline-block;
+}
+.retrieve p:first-of-type{
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+.retrieve p:nth-child(2){
+    float:right;
+    margin-right: 40px;
+}
+.retrieve p input{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.retrieve p span{
+        margin-left: 2px;
+        position: relative;
+        top: 1px;
+}
+.foot{
+    height: 72px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.14);
+    position: fixed;
+    bottom: 10px;
+    padding-top: 15px;
+}
+.foot p{
+    text-align: center;
+    line-height: 2.2;
+    color: #9196b3;
+    font-size: 12px;
+}
+.foot p a{
+    margin: 0 43px;
+    color: #bebfd1;
+    font-size: 13px;
+}
